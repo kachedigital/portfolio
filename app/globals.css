@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #0d0d0d; /* Updated to deep-charcoal */
+  --accent-orange: #ff8c42;
+  --accent-purple: #a259ff;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+
+  --font-display: "Montserrat", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "Fira Code", monospace;
+
+  --background: 0 0% 10%;
+  --foreground: 0 0% 88%;
+
+  --card: 0 0% 5%; /* Darker card background */
+  --card-foreground: 0 0% 88%;
+
+  --popover: 0 0% 5%; /* Darker popover background */
+  --popover-foreground: 0 0% 88%;
+
+  --primary: 25 100% 63%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 270 100% 67%;
+  --secondary-foreground: 0 0% 100%;
+
+  --muted: 0 0% 5%; /* Darker muted background */
+  --muted-foreground: 0 0% 63%;
+
+  --accent: 25 100% 63%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 88%;
+
+  --border: 0 0% 15%; /* Slightly darker border */
+  --input: 0 0% 15%; /* Slightly darker input */
+  --ring: 25 100% 63%;
+
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+  }
+
+  p,
+  span,
+  div {
+    font-family: var(--font-body);
+  }
+
+  code {
+    font-family: var(--font-mono);
+  }
+}
+
+@layer utilities {
+  .hover-glow {
+    transition: all 0.3s ease;
+    border-color: rgba(162, 89, 255, 0.5); /* Default purple border */
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 15px rgba(255, 140, 66, 0.4); /* Orange glow on hover */
+    border-color: rgba(255, 140, 66, 0.5); /* Orange border on hover */
+  }
+
+  .card-3d {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+
+  .card-content {
+    transform: translateZ(20px);
+    transition: transform 0.3s ease;
+  }
+
+  .accent-border-top {
+    position: relative;
+  }
+
+  .accent-border-top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #a259ff; /* Changed to purple by default */
+    transition: background-color 0.3s ease;
+  }
+
+  .accent-border-top:hover::before {
+    background-color: #ff8c42; /* Changed to orange on hover */
+  }
+
+  .link-underline {
+    position: relative;
+    display: inline-block;
+  }
+
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #ff8c42; /* Changed from #a259ff to #ff8c42 */
+    transition: width 0.3s ease;
+  }
+
+  .link-underline:hover::after {
+    width: 100%;
+  }
+
+  .animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-pulse-border {
+    position: relative;
+  }
+
+  .animate-pulse-border::after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff8c42, #a259ff);
+    z-index: -1;
+    animation: pulseBorder 2s infinite;
+  }
+
+  @keyframes pulseBorder {
+    0% {
+      opacity: 0.6;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+    100% {
+      opacity: 0.6;
+      transform: scale(1);
+    }
+  }
+
+  .social-icon {
+    transition: all 0.3s ease;
+    color: #a259ff;
+  }
+
+  .social-icon:hover {
+    transform: rotate(15deg);
+    color: #ff8c42;
+  }
+
+  .drop-shadow-glow {
+    filter: drop-shadow(0 0 6px rgba(255, 140, 66, 0.4)) drop-shadow(0 0 12px rgba(162, 89, 255, 0.3));
+  }
+
+  .drop-shadow-subtle {
+    filter: drop-shadow(0 0 2px rgba(255, 140, 66, 0.3)) drop-shadow(0 0 4px rgba(162, 89, 255, 0.2));
+  }
+
+  .drop-shadow-button {
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5));
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 1.2s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
