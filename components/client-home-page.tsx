@@ -141,30 +141,25 @@ export default function ClientHomePage() {
               </div>
 
               {/* Add name heading */}
-              <h1 className="text-center text-2xl font-display font-bold mt-4 mb-2 text-white">Dominique E.</h1>
-
-              {/* Social Media Icons */}
-              <div className="flex justify-center items-center gap-4 mt-4">
-                {socialIcons.map((icon) => (
+              <h1 className="text-center text-2xl font-display font-bold mt-4 mb-2 text-white">
+                <span className="inline-flex items-center">
+                  Dominique E.
                   <Link
-                    key={icon.name}
-                    href={icon.href || "#"}
+                    href="https://www.linkedin.com/in/deewell/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transform transition-all duration-300 hover:scale-110 hover:-translate-y-1"
+                    className="inline-flex items-center ml-4 hover:opacity-80 transition-opacity"
                   >
-                    <div className="relative w-12 h-12 drop-shadow-lg">
-                      <Image
-                        src={icon.src || "/placeholder.svg"}
-                        alt={icon.alt}
-                        width={48}
-                        height={48}
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
+                    <Image
+                      src="/linkedin-icon.png"
+                      alt="LinkedIn Profile"
+                      width={26}
+                      height={26}
+                      className="object-contain"
+                    />
                   </Link>
-                ))}
-              </div>
+                </span>
+              </h1>
             </div>
           </div>
         }

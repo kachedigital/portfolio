@@ -2,9 +2,7 @@
 
 import type { ReactNode } from "react"
 import { motion } from "framer-motion"
-import { TextReveal, AnimatedText } from "@/components/ui/aceternity"
 import BentoItem from "./bento-item"
-import { FlipWords } from "@/components/ui/flip-words"
 import ExperienceBento from "./experience-bento"
 
 interface BentoBoxProps {
@@ -27,17 +25,17 @@ const BentoBox = ({ className = "", children }: BentoBoxProps) => {
   const words = ["Smart", "Creative", "Accessible"]
 
   return (
-    <section className={`w-full py-16 ${className}`}>
+    <section className={`w-full py-8 ${className}`}>
       <div className="max-w-7xl mx-auto px-4">
-        <div className="mb-16 max-w-full">
+        {/* <div className="mb-8 max-w-full pb-4 overflow-visible text-left">
           <TextReveal>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-5 max-w-full">
-              <AnimatedText text="Building " />
-              <FlipWords words={words} className="text-accent-orange" />
-              <AnimatedText text=" digital experiences" />
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-5 max-w-full leading-loose overflow-visible pb-8 -ml-4">
+              <AnimatedText text="BUILDING" />
+              <FlipWords words={words} className="text-accent-orange uppercase" />
+              <AnimatedText text=" DIGITAL EXPERIENCES" />
             </h2>
           </TextReveal>
-        </div>
+        </div> */}
 
         {/* SVG Background Pattern */}
         <div className="absolute inset-0 -z-10 opacity-10 pointer-events-none">

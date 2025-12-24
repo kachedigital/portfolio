@@ -3,7 +3,6 @@
 import type { FC, ReactNode } from "react"
 import { Button } from "@/components/ui/button"
 import { AnimatedText, Spotlight, TextReveal } from "@/components/ui/aceternity"
-import { Download } from "lucide-react"
 
 interface HeroProps {
   image?: ReactNode
@@ -60,20 +59,6 @@ const Hero: FC<HeroProps> = ({ image, ctaButtons, onOpenEmailForm }) => {
               ctaButtons
             ) : (
               <div className="flex flex-wrap gap-4 pt-4 animate-fade-in" style={{ animationDelay: "0.8s" }}>
-                <Button
-                  asChild
-                  className="bg-accent-orange hover:bg-accent-purple text-white rounded-xl px-6 py-6 flex items-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-lg drop-shadow-button"
-                >
-                  <a
-                    href="https://synaz3xz7xc7xzre.public.blob.vercel-storage.com/KachePortfolio/docs/D.Ewell_Res_8.25.pdf"
-                    download="Dominique_Ewell_Resume.pdf"
-                    aria-label="Download Dominique Ewell's resume as PDF"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Download CV <Download size={16} />
-                  </a>
-                </Button>
                 <Button
                   variant="outline"
                   className="text-white rounded-xl px-6 py-6 flex items-center gap-2 transition-all duration-300 hover:scale-105 border-accent-purple hover:text-white drop-shadow-button bg-transparent"

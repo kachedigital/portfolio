@@ -67,37 +67,37 @@ const ExperienceBento = () => {
   ]
 
   return (
-    <div className="h-full flex flex-col">
+    <div className="h-[234px] flex flex-col items-center">
       <TextReveal>
         <h3 className="text-xl font-display font-semibold mb-4 text-accent-orange">
           <AnimatedText text="Experience" className="text-xl font-display font-semibold" />
         </h3>
       </TextReveal>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 flex-grow">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 w-full place-items-center">
         {cards.map((card) => (
           <div
             key={card.title}
-            className="relative w-full h-[300px] [perspective:1000px]" // Added relative here
+            className="relative w-full h-[156px] [perspective:1000px]"
             onClick={() => handleFlip(card.title)}
           >
             <motion.div
-              className="relative w-full h-full transition-transform duration-700"
-              style={{ transformStyle: "preserve-3d" }}
+              className="absolute inset-0 transition-transform duration-700 will-change-transform"
+              style={{
+                transformStyle: "preserve-3d",
+                transformOrigin: "center center",
+              }}
               animate={{ rotateY: flippedCard === card.title ? 180 : 0 }}
             >
-              {/* Front of the card */}
-              <div className="absolute w-full h-full [backface-visibility:hidden] bg-bg-primary p-4 rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.3)] border border-accent-purple hover:border-accent-orange transition-all duration-300 hover-glow accent-border-top cursor-pointer">
+              <div className="absolute inset-0 [backface-visibility:hidden] bg-bg-primary p-3 rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.3)] border border-accent-purple hover:border-accent-orange transition-all duration-300 hover-glow accent-border-top cursor-pointer h-[156px]">
                 <div className="flex flex-col items-center text-center h-full justify-center">
-                  <div
-                    className={`${card.title === "Freelance Consultant" ? "w-24 h-24" : "w-20 h-20"} mb-3 flex items-center justify-center`}
-                  >
+                  <div className="w-[72px] h-[72px] mb-3 flex items-center justify-center flex-shrink-0">
                     {card.title === "Freelance Consultant" ? (
                       <Image
                         src={card.src || "/placeholder.svg"}
                         alt={card.title}
-                        width={96}
-                        height={96}
+                        width={72}
+                        height={72}
                         className="h-full w-full object-contain rounded-md"
                         priority
                       />
@@ -116,13 +116,12 @@ const ExperienceBento = () => {
                 </div>
               </div>
 
-              {/* Back of the card */}
-              <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-bg-secondary p-4 rounded-xl border border-accent-orange flex flex-col">
+              <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-bg-secondary p-3 rounded-xl border border-accent-orange flex flex-col h-[156px]">
                 <div className="flex justify-between items-center mb-2 flex-shrink-0">
                   <h4 className="text-lg font-semibold text-accent-orange">{card.title}</h4>
                   <button
                     onClick={(e) => {
-                      e.stopPropagation() // Prevent card from re-flipping
+                      e.stopPropagation()
                       handleFlip(card.title)
                     }}
                     className="p-1 rounded-full hover:bg-bg-primary"
