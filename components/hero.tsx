@@ -30,8 +30,10 @@ const Hero: FC<HeroProps> = ({ image, ctaButtons, onOpenEmailForm }) => {
           {/* Content Column */}
           <div className="space-y-8 animate-fade-in-up">
             <TextReveal>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500 bg-clip-text text-transparent drop-shadow-subtle">
-                Creative Technologist | AI & Automation
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight">
+                <span className="bg-gradient-to-r from-accent-orange via-accent-purple to-accent-orange bg-clip-text text-transparent">
+                  AI Integration & Product Strategy
+                </span>
               </h1>
             </TextReveal>
 
@@ -47,10 +49,30 @@ const Hero: FC<HeroProps> = ({ image, ctaButtons, onOpenEmailForm }) => {
                 style={{ animationDelay: "0.6s" }}
               >
                 <p>
-                  I build human-centered AI tools that are intuitive, scalable, and solve real-world problems. As an AI
-                  Integration Specialist, I focus on customer experience (CX), accessibility, and inclusive UX. I
-                  modernize digital platforms by embedding AI-driven functionality and streamlining user journeys
+                  I am a Creative Technologist & AI Product Analyst specializing in Governance and Integration. I bridge
+                  the gap between emerging technology and business operations by analyzing complex workflows to
+                  determine the most effective, ethical, and scalable AI solutions. Whether building custom automation
+                  for small businesses or managing large-scale digital transformations, my mission is to turn technical
+                  potential into human-centered results.
                 </p>
+              </div>
+            </div>
+
+            <div
+              className="grid grid-cols-1 md:grid-cols-3 gap-6 border-t border-zinc-700 pt-8 animate-fade-in"
+              style={{ animationDelay: "0.6s" }}
+            >
+              <div className="text-center md:text-left">
+                <span className="block text-3xl md:text-4xl font-bold text-blue-400">93%</span>
+                <span className="text-xs uppercase tracking-widest text-zinc-400">Compliance Achieved</span>
+              </div>
+              <div className="text-center md:text-left">
+                <span className="block text-3xl md:text-4xl font-bold text-blue-400">1,000+</span>
+                <span className="text-xs uppercase tracking-widest text-zinc-400">Assets Remediated</span>
+              </div>
+              <div className="text-center md:text-left">
+                <span className="block text-3xl md:text-4xl font-bold text-blue-400">10+ Years</span>
+                <span className="text-xs uppercase tracking-widest text-zinc-400">State Innovation</span>
               </div>
             </div>
 

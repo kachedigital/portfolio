@@ -12,6 +12,7 @@ import SectionWrapper from "@/components/section-wrapper"
 import ScrollProgressBar from "@/components/scroll-progress-bar"
 import FeaturedProjectFlowFactor from "@/components/bento-box/featured-project-flowfactor"
 import EmailCaptureForm from "@/components/email-capture-form"
+import StateCaseStudyGrid from "@/components/state-case-study-grid"
 
 export default function ClientHomePage() {
   const [isEmailFormOpen, setIsEmailFormOpen] = useState(false)
@@ -174,6 +175,11 @@ export default function ClientHomePage() {
           </TextReveal>
           <FeaturedProjectFlowFactor />
         </div>
+      </SectionWrapper>
+
+      {/* State Case Study Grid */}
+      <SectionWrapper>
+        <StateCaseStudyGrid />
       </SectionWrapper>
 
       {/* Bento Box Section */}

@@ -24,44 +24,74 @@ const ExperienceBento = () => {
   const cards: Card[] = [
     {
       title: "Freelance Consultant",
-      description: "AI Development, UX, and Accessibility",
+      description: "Web Developer & UX Designer (Franchise Tax Board)",
       src: "/kd-logo.png",
       content: (
-        <p className="text-zinc-300">
-          Delivered AI-powered tools, interactive dashboards, and automated systems using Next.js, React, OpenAI,
-          Supabase, and Tailwind CSS. Specialized in accessible design (WCAG 2.1), neuroinclusive UX, technical
-          documentation, and content automation. Notable projects include the FlowFactor Co-Pilot, accessibility audit
-          tools, and AI agents for ergonomics and affiliate marketing.
-        </p>
+        <div className="text-zinc-300 text-xs">
+          <p className="mb-2 font-semibold text-accent-orange">The Product & UX Specialist</p>
+          <p className="mb-2 italic">Focus: Agile integration and Standards</p>
+          <p>
+            Partnered with engineering teams in an Agile environment to design and document internal UX standards,
+            ensuring seamless navigation and accessibility compliance across enterprise-level systems.
+          </p>
+        </div>
       ),
     },
     {
       title: "State of California",
-      description: "Web Content & Accessibility Analyst",
+      description: "Product & Governance Strategist | Systems Analysis & AI Readiness",
       src: "https://synaz3xz7xc7xzre.public.blob.vercel-storage.com/KachePortfolio/imgs/cagov-logo-flag-gradient-eUnMZD41yKQ70fYPKjOW9gtRlsauJ4.png",
       content: (
-        <ul className="list-disc list-inside text-zinc-300 space-y-2">
-          <li>Conducted comprehensive accessibility audits of public websites for WCAG 2.1 A/AA compliance.</li>
-          <li>
-            Provided remediation guidance, trained staff, and delivered follow-up audits to ensure lasting ADA
-            compliance.
-          </li>
-          <li>Designed accessible workflows and content strategies for digital platforms.</li>
-          <li>Developed a custom HR tracking tool integrated with DocuSign to streamline timekeeping.</li>
-          <li>Led intranet redesigns and SharePoint Online migrations for improved usability and structure.</li>
-        </ul>
+        <div className="text-zinc-300 text-xs space-y-2">
+          <p className="font-semibold text-accent-orange">
+            Agencies: California Commission on Teacher Credentialing (CTC) & Franchise Tax Board (FTB)
+          </p>
+          <p>
+            <span className="font-semibold">Systems Analysis & Infrastructure Modernization:</span> Served as the lead
+            for content and accessibility documentation during mission-critical Azure cloud migrations and enterprise
+            SharePoint intranet redesigns. I analyzed and simplified complex Information Architecture (IA) and
+            navigation to reduce technical debt and internal support requests.
+          </p>
+          <p>
+            <span className="font-semibold">Enterprise Governance & Policy Development:</span> Led the agency-wide
+            initiative to bring public-facing platforms into full ADA compliance by authoring official document
+            remediation policies and technical SOPs. I established standardized processes and Markdown-based guides to
+            ensure "Digital First" principles and accessibility standards were shifted upstream in the development
+            lifecycle.
+          </p>
+          <p>
+            <span className="font-semibold">Strategic AI Integration & Compliance Auditing:</span> Orchestrated
+            large-scale audits of over 1,000 digital assets, utilizing AI-assisted quality checks to increase
+            accessibility compliance from 72% to over 93%.
+          </p>
+          <p>
+            <span className="font-semibold">Agile Product Management & Automation:</span> Partnered with
+            cross-functional engineering teams in Agile environments to refine user journeys and deliver automated
+            business solutions, such as a DocuSign-integrated HR tool that streamlined time-tracking and data
+            validation.
+          </p>
+          <p>
+            <span className="font-semibold">Stakeholder Alignment & Training:</span> Acted as a bridge between technical
+            developers and business program owners, providing training and specialized developer documentation to ensure
+            diverse stakeholder groups remained aligned with project milestones and regulatory mandates.
+          </p>
+        </div>
       ),
     },
     {
       title: "Amazon",
-      description: "Process Assistant & Analyst",
+      description: "Data Annotation & ML Support",
       src: "https://synaz3xz7xc7xzre.public.blob.vercel-storage.com/KachePortfolio/imgs/amazon-dark-logo-png-transparent-ID6rUF6sNMmoPXZhr74zA5NB5RcOFt.png",
       content: (
-        <p className="text-zinc-300">
-          Managed frontline operations and supported performance analysis, system monitoring, and workflow automation.
-          Used Excel, internal dashboards, and analytics tools to track KPIs, optimize routes, and coordinate
-          cross-functional reporting.
-        </p>
+        <div className="text-zinc-300 text-xs">
+          <p className="mb-2 font-semibold text-accent-orange">The Data & ML Strategist</p>
+          <p className="mb-2 italic">Focus: Data Integrity and Model Training</p>
+          <p>
+            Optimized data integrity for large-scale machine learning datasets through high-precision annotation and
+            image classification; collaborated with developers to refine validation scripts, ensuring the reliability of
+            AI-assisted review workflows.
+          </p>
+        </div>
       ),
     },
   ]
